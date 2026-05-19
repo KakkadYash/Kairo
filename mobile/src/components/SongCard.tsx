@@ -1,18 +1,19 @@
-import { Image, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 import { theme } from "../constants/theme";
 import { Song } from "../types/song";
 
 type SongCardProps = {
   song: Song;
+  onPress: (song: Song) => void;
 };
 
-export function SongCard({ song }: SongCardProps) {
+export function SongCard({ song, onPress }: SongCardProps) {
   const minutes = Math.floor(song.duration_seconds / 60);
   const seconds = String(song.duration_seconds % 60).padStart(2, "0");
 
   return (
-    <View style={styles.card}>
+    <Pressable style={styles.card} onPress={() => onPress(song)}>
       <Image source={{ uri: song.cover_url }} style={styles.cover} />
 
       <View style={styles.content}>
@@ -38,7 +39,7 @@ export function SongCard({ song }: SongCardProps) {
           <Text style={styles.tag}>{song.language}</Text>
         </View>
       </View>
-    </View>
+    </Pressable>
   );
 }
 

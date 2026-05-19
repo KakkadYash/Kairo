@@ -15,7 +15,7 @@ def get_songs():
             "genre": "R&B",
             "duration_seconds": 214,
             "cover_url": "https://example.com/covers/golden-hour.jpg",
-            "stream_url": "https://example.com/streams/golden-hour.mp3",
+            "stream_url": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
         },
         {
             "id": "song-002",
