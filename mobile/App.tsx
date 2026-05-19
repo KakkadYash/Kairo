@@ -2,14 +2,17 @@ import { StatusBar } from "expo-status-bar";
 import { SafeAreaView, StyleSheet } from "react-native";
 
 import { theme } from "./src/constants/theme";
+import { PlayerProvider } from "./src/context/PlayerContext";
 import { LibraryScreen } from "./src/screens/LibraryScreen";
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar style="light" />
-      <LibraryScreen />
-    </SafeAreaView>
+    <PlayerProvider>
+      <SafeAreaView style={styles.container}>
+        <StatusBar style="light" />
+        <LibraryScreen />
+      </SafeAreaView>
+    </PlayerProvider>
   );
 }
 
