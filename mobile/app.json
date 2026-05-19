@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Kairo",
+    "slug": "kairo",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#050505"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
